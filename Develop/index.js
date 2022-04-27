@@ -7,22 +7,22 @@ const questionPrompt = () => {
   return inquirer.prompt([
     {
       type: "input",
-      name: "title",
+      name: "teamManager",
       message: "Please enter the team manager's name.",
     },
     {
       type: "input",
-      name: "title",
+      name: "id",
       message: "Please enter your employee ID.",
     },
     {
       type: "input",
-      name: "title",
+      name: "email",
       message: "Please enter your email address.",
     },
     {
       type: "input",
-      name: "title",
+      name: "officeNumber",
       message: "Please enter your office number.",
     },
     
