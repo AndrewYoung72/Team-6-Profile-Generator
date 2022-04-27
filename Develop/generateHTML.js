@@ -19,7 +19,7 @@ const generateHTML = ({ teamManager, id, email, officeNumber }) =>
   <div class="card-body">
     <h5 class="card-title">Team Manager: ${teamManager}</h5>
     <h5 class="card-title">Employee ID: ${id}</h5>
-    <a href="${email}" style="color:white;">Email: ${email}</a>
+    <a href="${email}" class="card-title">Email: ${email}</a>
     <h5 class="card-title">Office Number: ${officeNumber}</h5>
   </div>
 </div>
