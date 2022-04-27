@@ -32,7 +32,7 @@ const questionPrompt = () => {
 };
 
 
-const generateHTML = ({ teamManager, employeeID, email, office }) =>
+const generateHTML = ({ teamManager, id, email, officeNumber }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,9 +45,9 @@ const generateHTML = ({ teamManager, employeeID, email, office }) =>
 <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
   <div class="card-header">Team Manager: ${teamManager}</div>
   <div class="card-body">
-    <h5 class="card-title">employee ID: ${employeeID}</h5>
+    <h5 class="card-title">employee ID: ${id}</h5>
     <h5 class="card-title">Email: ${email}</h5>
-    <p class="card-text">Office#: ${office }</p>
+    <p class="card-text">Office#: ${officeNumber}</p>
     
   </div>
 </div>
