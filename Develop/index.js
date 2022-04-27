@@ -25,16 +25,16 @@ const questionPrompt = () => {
       name: "officeNumber",
       message: "Please enter your office number.",
     },
-    {
-      type: "list",
-      name: "options",
-      message: "Choose an option.",
-      choices: [
-        "Add an engineer",
-        "Add an intern",
-        "Finish building team",
-      ]
-    },    
+    // {
+    //   type: "list",
+    //   name: "options",
+    //   message: "Choose an option.",
+    //   choices: [
+    //     "Add an engineer",
+    //     "Add an intern",
+    //     "Finish building team",
+    //   ]
+    // },    
 
   ])
 };

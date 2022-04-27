@@ -1,3 +1,4 @@
+const inquirer = require('inquirer');
 const Employee = require('./Employee');
 
 class Engineer extends Employee {
@@ -6,11 +7,15 @@ class Engineer extends Employee {
   }
 
   getGithub() {
-
+    inquirer.prompt([{
+      name: 'gitHub',
+      message: 'Please enter your GitHub address.',
+      type: 'input'
+    }])
   }
 
   getRole() {
-    
+    return 'Engineer'
   }
 
 }
