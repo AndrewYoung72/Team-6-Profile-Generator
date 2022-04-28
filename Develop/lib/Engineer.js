@@ -1,4 +1,4 @@
-const inquirer = require('inquirer');
+
 const Employee = require('./Employee');
 
 class Engineer extends Employee {
@@ -19,3 +19,5 @@ class Engineer extends Employee {
   }
 
 }
+
+module.exports =  Engineer;

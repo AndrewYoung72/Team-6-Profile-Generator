@@ -1,7 +1,7 @@
 
 
 
-const generateHTML = ({ teamManager, id, email, officeNumber, gitHub, school }) =>
+const generateHTML = ({ teamManager, id, email, officeNumber, name, gitHub, school }) =>
 `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +21,7 @@ const generateHTML = ({ teamManager, id, email, officeNumber, gitHub, school }) 
     <div class="card-header"> ${teamManager}</div>
     <div class="card-header">ID: ${id}</div>
     <a href="#${email}" class="card-link">Email: ${email}</a>
-    <div class="card-header">ID: 1 </div>
+    <div class="card-header">Office number: ${officeNumber}</div>
   </div>
 </div>
   
