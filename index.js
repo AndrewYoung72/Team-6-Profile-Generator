@@ -28,7 +28,7 @@ const questionPrompt = () => {
     // {
     //   type: "list",
     //   name: "options",
-    //   message: "Choose an option.",
+    //   message: "Choose an option using the arrow keys.",
     //   choices: [
     //     "Add an engineer",
     //     "Add an intern",
