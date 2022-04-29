@@ -28,6 +28,7 @@ const generateHTML = (teamArray) =>
       <div class="card border-primary mb-3" style="width: 18rem;">
         <div class="card-body text-primary">
           <div class="card-header"> ${employee.getName()}</div>
+          <div class="card-header"> ${employee.getRole()}</div>
           <div class="card-header">ID: ${employee.getId()}</div>
           <a href="#${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
          ${generateLastProperty(employee)}

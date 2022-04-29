@@ -6,6 +6,8 @@ const Intern = require("./lib/Intern");
 const generateHTML = require('./generateHTML');
 const fs = require("fs");
 
+
+
 const teamArray = [];
 
 const createManager = () => {
@@ -15,12 +17,28 @@ const createManager = () => {
       type: "input",
       name: "teamManager",
       message: "Please enter the team manager's name.",
-    }
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "Please enter your ID number.",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Please enter your email address.",
+    },
+    {
+      type: "input",
+      name: "officeNumber",
+      message: "Please enter your office number.",
+    },
+
   ])
   .then((answers) => {
     // answers.teamManager ---> "John"
     // using the answers, create a new Manager object using the class
-    const newManager = new Manager(answers.teamManager, 1, "test@mail.com", 123)
+    const newManager = new Manager(answers.teamManager, answers.id, answers.email, answers.officeNumber)
     // add the new Manager in a "basket"
     teamArray.push(newManager)
 
@@ -59,12 +77,28 @@ const createEngineer = () => {
       type: "input",
       name: "teamEngineer",
       message: "Please enter the team engineer's name.",
-    }
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "Please enter your ID number.",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Please enter your email address.",
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "Please enter your GitHub address.",
+    },
+    
   ])
   .then((answers) => {
     // using the answers, create a new con
     // add the new Engineer in a "basket"
-    const newEngineer = new Engineer(answers.teamEngineer, )
+    const newEngineer = new Engineer(answers.teamEngineer, answers.id, answers.email, answers.github )
     teamArray.push(newEngineer)
     menu();
   })
@@ -77,10 +111,26 @@ const createIntern = () => {
       type: "input",
       name: "teamIntern",
       message: "Please enter the team intern's name.",
-    }
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "Please enter your ID number.",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Please enter your email address.",
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "Please enter your GitHub address.",
+    },
+
   ])
   .then((answers) => {
-    const newIntern = new Intern(answers.teamIntern, )
+    const newIntern = new Intern(answers.teamIntern, answers.id, answers.email, answers.github )
     teamArray.push(newIntern)
     menu();
   })
@@ -89,11 +139,21 @@ const createIntern = () => {
 const finishBuild = () => {
   const generatedOutput = generateHTML(teamArray);
 
-  console.log(generatedOutput);
+  console.log('Finished');
+  
+  console.log("Finish build! Now generate your HTML!")
+  fs.writeFile('index.html', generatedOutput, (err) =>
+  err ? console.error(err) : console.log('Your html was created!'))
+};
 
-  
-  
-  console.log("Finish build!")
-}
+
+// const init = () => {
+//   finishBuild()
+//     // Use writeFileSync method to use promises instead of a callback function
+//     .then((generatedOutput) => fs.writeFileSync('index.html', generateHTML(generatedOutput)))
+//     .then(() => console.log('Successfully wrote to index.html'))
+//     .catch((err) => console.error(err));
+// };
+// init();
 
 createManager()
