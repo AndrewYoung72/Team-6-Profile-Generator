@@ -147,13 +147,5 @@ const finishBuild = () => {
 };
 
 
-// const init = () => {
-//   finishBuild()
-//     // Use writeFileSync method to use promises instead of a callback function
-//     .then((generatedOutput) => fs.writeFileSync('index.html', generateHTML(generatedOutput)))
-//     .then(() => console.log('Successfully wrote to index.html'))
-//     .catch((err) => console.error(err));
-// };
-// init();
 
 createManager()

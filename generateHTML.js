@@ -25,15 +25,18 @@ const generateHTML = (teamArray) =>
 
   ${teamArray.map((employee) => {
     return `
+
+    <div class="d-flex flex-row">
       <div class="card border-primary mb-3" style="width: 18rem;">
         <div class="card-body text-primary">
           <div class="card-header"> ${employee.getName()}</div>
           <div class="card-header"> ${employee.getRole()}</div>
           <div class="card-header">ID: ${employee.getId()}</div>
-          <a href="#${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
+          <a href=mailto:"${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
          ${generateLastProperty(employee)}
         </div>
       </div>
+    </div>
       `;
   })}
 
