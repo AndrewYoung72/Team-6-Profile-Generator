@@ -2,10 +2,10 @@ const Employee = require('../lib/Employee');
 
 
 describe("Employee", () => {
-  describe("name", () => {
-    it("should return a 'string' not a number.", () => {
+  describe("getRole", () => {
+    it("should return the new employee's title.", () => {
       const obj = new Employee();
-      expect("string" in obj).toEqual(true);
+      expect(Employee.name).toEqual("Employee");
     }); 
   });
 });
