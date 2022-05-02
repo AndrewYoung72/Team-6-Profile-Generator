@@ -105,7 +105,7 @@ const createEngineer = () => {
 }
 
 const createIntern = () => {
-  // ask for engineer details
+  // ask for intern details
   inquirer.prompt([
     {
       type: "input",
@@ -141,7 +141,7 @@ const finishBuild = () => {
 
   console.log('Finished');
   
-  console.log("Finish build! Now generate your HTML!")
+  console.log("Finish build! Now generate your HTML!");
   fs.writeFile('index.html', generatedOutput, (err) =>
   err ? console.error(err) : console.log('Your html was created!'))
 };

@@ -22,25 +22,25 @@ const generateHTML = (teamArray) =>
       <h1 class="display-4">Our Team</h1>
     </div>
   </div>
+  <div class="d-flex flex-row ">
 
   ${teamArray.map((employee) => {
     return `
 
-    <div class="d-flex flex-row">
       <div class="card border-primary mb-3" style="width: 18rem;">
         <div class="card-body text-primary">
-          <div class="card-header"> ${employee.getName()}</div>
-          <div class="card-header"> ${employee.getRole()}</div>
+          <div class="card-header bg-primary text-white"> ${employee.getName()}</div>
+          <div class="card-header bg-primary text-white"> ${employee.getRole()}</div>
           <div class="card-header">ID: ${employee.getId()}</div>
-          <a href=mailto:"${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
+          <a href=mailto:"${employee.getEmail()}" class="card-link text-primary">Email: ${employee.getEmail()}</a>
          ${generateLastProperty(employee)}
         </div>
       </div>
-    </div>
+    
       `;
   })}
 
-  
+  </div>
   
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
