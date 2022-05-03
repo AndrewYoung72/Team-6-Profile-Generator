@@ -141,7 +141,7 @@ const finishBuild = () => {
 
   console.log('Finished');
   
-  console.log("Finish build! Now generate your HTML!");
+  console.log("Now generate your HTML!");
   fs.writeFile('index.html', generatedOutput, (err) =>
   err ? console.error(err) : console.log('Your html was created!'))
 };
