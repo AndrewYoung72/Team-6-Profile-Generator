@@ -2,7 +2,7 @@ const generateLastProperty = (employee) => {
     if (employee.getRole() == "Manager") {
       return ` <div class="card-header bg-primary text-white">Office number: ${employee.officeNumber}</div>`;
     } else if (employee.getRole() == "Engineer") {
-      return ` <div class="card-header bg-primary text-white">Github: ${employee.github}</div>`;
+      return ` <a href="${employee.github}" class="card-header p-2 flex-shrink-1 bg-primary text-white">${employee.github}</a>`;
     } else if (employee.getRole() == "Intern") {
       return ` <div class="card-header bg-primary text-white">School: ${employee.school}</div>`;
     }
