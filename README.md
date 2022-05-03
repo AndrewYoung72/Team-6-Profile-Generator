@@ -1,6 +1,5 @@
 # Team-6-Profile-Generator
-
-
+https://user-images.githubusercontent.com/97897877/166552230-8baa94f7-1f45-493f-b8bb-1ea450d4885c.mp4
 ## Purpose
 The purpose of this project was to create an application that would generate a team roster so a manager would have quick access to the team member's emails and GitHub profiles. We also needed to construct tests that would test the classes needed to create the application. We were provided with a file framework to organize our files, but no starter code.
 
