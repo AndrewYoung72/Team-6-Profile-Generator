@@ -125,7 +125,7 @@ const createIntern = () => {
     {
       type: "input",
       name: "github",
-      message: "Please enter your GitHub address.",
+      message: "Please enter your school name.",
     },
 
   ])

@@ -1,10 +1,10 @@
 const generateLastProperty = (employee) => {
     if (employee.getRole() == "Manager") {
-      return ` <div class="card-header bg-primary">Office number: ${employee.officeNumber}</div>`;
+      return ` <div class="card-header bg-primary text-white">Office number: ${employee.officeNumber}</div>`;
     } else if (employee.getRole() == "Engineer") {
-      return ` <div class="card-header bg-primary">Github: ${employee.github}</div>`;
+      return ` <div class="card-header bg-primary text-white">Github: ${employee.github}</div>`;
     } else if (employee.getRole() == "Intern") {
-      return ` <div class="card-header bg-primary">School: ${employee.school}</div>`;
+      return ` <div class="card-header bg-primary text-white">School: ${employee.school}</div>`;
     }
 }
 
@@ -31,7 +31,7 @@ const generateHTML = (teamArray) =>
         <div class="card-body text-primary">
           <div class="card-header bg-primary text-white"> ${employee.getName()}</div>
           <div class="card-header bg-primary text-white"> ${employee.getRole()}</div>
-          <div class="card-header bg-primary">ID: ${employee.getId()}</div>
+          <div class="card-header bg-primary text-white">ID: ${employee.getId()}</div>
           <a href=mailto:"${employee.getEmail()}" class="card-link text-primary">Email: ${employee.getEmail()}</a>
          ${generateLastProperty(employee)}
         </div>
